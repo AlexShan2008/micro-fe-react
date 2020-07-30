@@ -14,6 +14,7 @@ const About = lazy(() => import('./pages/About'));
 
 const RouteExample = () => {
   return (
+    // basename 必须与基座 base 保持一致 TODO: 可以封装一个组件来统一解决这个问题
     <Router basename={window.__POWERED_BY_QIANKUN__ ? '/react' : '/'}>
       <nav>
         <Link to="/">Home</Link>
