@@ -12,7 +12,7 @@ import Home from './pages/Home';
 
 const About = lazy(() => import('./pages/About'));
 
-const RouteExample = () => {
+const RouteExample = (props) => {
   return (
     // basename 必须与基座 base 保持一致 TODO: 可以封装一个组件来统一解决这个问题
     <Router basename={window.__POWERED_BY_QIANKUN__ ? '/react' : '/'}>
@@ -31,7 +31,8 @@ const RouteExample = () => {
   );
 };
 
-export default function App() {
+export default function App(props) {
+  const { BASE_STORE } = props.data
   return (
     <div className="app-main">
       <LibVersion />
@@ -40,6 +41,10 @@ export default function App() {
       <Divider />
 
       <RouteExample />
+
+     <div>
+      <h3>Data from Parent App: <i>{BASE_STORE.title}</i></h3>
+    </div>
     </div>
   );
 }
