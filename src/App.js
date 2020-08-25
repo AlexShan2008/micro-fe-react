@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 import { Divider } from 'antd';
+import { GlobalStyle } from "super-design";
 
 import 'antd/dist/antd.min.css';
 import './App.css';
@@ -11,6 +12,7 @@ import HelloModal from './components/HelloModal';
 import Home from './pages/Home';
 
 const About = lazy(() => import('./pages/About'));
+
 
 const RouteExample = (props) => {
   return (
@@ -32,18 +34,25 @@ const RouteExample = (props) => {
 };
 
 export default function App(props) {
-  const { BASE_STORE } = props.data
+  // const { BASE_STORE } = props.data
   return (
     <div className="app-main">
+
+      <GlobalStyle />
+
+      {/* <Badge /> */}
+      {/* <Avatar /> */}
+      <li>111</li>
+      {/* <Button>Super Design</Button> */}
+
+      
       <LibVersion />
       <HelloModal />
-
       <Divider />
-
       <RouteExample />
 
      <div>
-      <h3>Data from Parent App: <i>{BASE_STORE.title}</i></h3>
+      {/* <h3>Data from Parent App: <i>{BASE_STORE.title}</i></h3> */}
     </div>
     </div>
   );

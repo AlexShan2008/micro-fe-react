@@ -26,7 +26,7 @@ function storeTest(props) {
 }
 
 if(!window.__POWERED_BY_QIANKUN__){
-  render();
+  render({container: null});
 }
 export async function bootstrap(){
 
