@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-export default function() {
+export default function About() {
   return (
-    <h2 className="app-nav-item" style={{ borderColor: 'green' }}>
+    <h2 className="app-nav-item" style={{ borderColor: "green" }}>
       About
     </h2>
   );
