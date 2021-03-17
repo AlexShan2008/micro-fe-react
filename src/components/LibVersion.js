@@ -1,8 +1,7 @@
-  
-import React, { version as reactVersion } from 'react';
-import { version as antdVersion } from 'antd';
+import React, { version as reactVersion } from "react";
+import { version as antdVersion } from "antd";
 
-export default function() {
+const LibVersion = () => {
   return (
     <>
       <h1 className="app-title">React Demo</h1>
@@ -11,4 +10,6 @@ export default function() {
       </p>
     </>
   );
-}
+};
+
+export default LibVersion;
